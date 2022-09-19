@@ -22,6 +22,8 @@ export const getExpFromChar = (char) => {
 }
 
 export const checkValidation = (str) => {
+    if(!!str.match(/^0\d+/g) || str === "")
+        return false;
     return !!str.match(/^\d*(,\d{3,3})*(.\d+)?[KMB]?$/i);
 }
 
